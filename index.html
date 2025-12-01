@@ -2,34 +2,203 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <link
-      href="./src/styles/output.css"
-      rel="stylesheet"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/styles/output.css" rel="stylesheet" />
     <title>Alle Assessoria</title>
   </head>
   <body>
     <main>
-      <section class="h-svh w-full flex items-center px-40">
-        <div class="w-full">
-          <div class="w-1/2 space-y-4">
-            <h1 class="text-6xl font-bold">
-              Cresça no Digital com a Solução Que Faz Sentido Para o Seu
-              Negócio.
-            </h1>
-            <p class="text-base text-gray-600 font-medium">
-              Com a Alle Assessoria & Marketing, você decide: aprender a
-              anunciar, contar com nossa gestão, ter sua página de alta
-              conversão pronta para vender e/ou melhorar sua presença nas redes
-              sociais.
-            </p>
+      <header
+        class="w-full h-20 flex items-center justify-between px-10 absolute top-0 left-0 z-50"
+      >
+        <img
+          src="/public/logo-aleassessoria.png"
+          alt="Logo Alle Assessoria"
+          class="w-10 object-contain"
+        />
+        <nav
+          class="bg-glass w-fit p-2 px-4 items-center justify-center gap-10 rounded-full hidden md:flex"
+        >
+          <a
+            href="#"
+            class="text-white font-semibold hover:text-[#ff6501] active:bg-gray-700/10 hover:bg-gray-700/10 rounded-full transition duration-300 p-2 px-3"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="text-white font-semibold hover:text-[#ff6501] active:bg-gray-700/10 hover:bg-gray-700/10 rounded-full transition duration-300 p-2 px-3"
+            >Serviços</a
+          >
+          <a
+            href="#"
+            class="text-white font-semibold hover:text-[#ff6501] active:bg-gray-700/10 hover:bg-gray-700/10 rounded-full transition duration-300 p-2 px-3"
+            >Sobre Nós</a
+          >
+          <a
+            href="#"
+            class="text-white font-semibold hover:text-[#ff6501] active:bg-gray-700/10 hover:bg-gray-700/10 rounded-full transition duration-300 p-2 px-3"
+            >Contato</a
+          >
+        </nav>
+        <button
+          class="text-white p-2 rounded-full font-bold hover:bg-gray-800 transition duration-300 cursor-pointer primary-color hidden md:flex"
+        >
+          <img
+            src="/public/whatsapp-brands-solid-full.svg"
+            alt="WhatsApp"
+            class="size-8"
+          />
+        </button>
+        <button
+          id="hamburguer-menu"
+          class="text-white p-2 rounded-full font-bold hover:bg-[#ff6501] transition duration-300 cursor-pointer flex md:hidden"
+        >
+          <img src="/public/bars-solid-full.svg" alt="Menu" class="size-8" />
+        </button>
+      </header>
+      <nav
+        id="sidebar"
+        class="z-50 absolute w-full h-svh top-0 -right-full p-4 bg-glass flex flex-col transition-all duration-300"
+      >
+        <div class="flex items-center justify-between w-full">
+          <img
+            src="/public/logo-aleassessoria.png"
+            alt="Logo Alle Assessoria"
+            class="w-10 object-contain"
+          />
+          <button
+            id="close-button"
+            class="text-white p-2 rounded-full font-bold hover:bg-[#ff6501] transition duration-300 cursor-pointer flex md:hidden"
+          >
+            <img
+              src="/public/xmark-solid-full.svg"
+              alt="Fechar Menu"
+              class="size-8"
+            />
+          </button>
+        </div>
+        <div class="flex-1">
+          <a
+            href="#"
+            class="block text-lg text-white font-semibold hover:text-[#ff6501] active:bg-gray-700/10 hover:bg-gray-700/10 rounded-full transition duration-300 p-4 px-5"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="block text-lg text-white font-semibold hover:text-[#ff6501] active:bg-gray-700/10 hover:bg-gray-700/10 rounded-full transition duration-300 p-4 px-5"
+            >Serviços</a
+          >
+          <a
+            href="#"
+            class="block text-lg text-white font-semibold hover:text-[#ff6501] active:bg-gray-700/10 hover:bg-gray-700/10 rounded-full transition duration-300 p-4 px-5"
+            >Sobre Nós</a
+          >
+          <a
+            href="#"
+            class="block text-lg text-white font-semibold hover:text-[#ff6501] active:bg-gray-700/10 hover:bg-gray-700/10 rounded-full transition duration-300 p-4 px-5"
+            >Contato</a
+          >
+        </div>
+        <div class="flex flex-col gap-2">
+          <a
+            href="#"
+            class="text-white p-4 md:p-4 md:px-8 rounded-full font-bold hover:bg-gray-800 transition duration-300 cursor-pointer primary-color flex items-center justify-center gap-2"
+          >
+            <img
+              src="/public/whatsapp-brands-solid-full.svg"
+              alt="WhatsApp"
+              class="size-8 inline-block"
+            />
+            <span class="text-lg">Entrar em Contato</span>
+          </a>
+          <a
+            href="#"
+            class="text-white p-4 md:p-4 md:px-8 rounded-full font-bold hover:bg-gray-800 transition duration-300 cursor-pointer primary-color flex items-center justify-center gap-2"
+          >
+            <img
+              src="/public/instagram-brands-solid-full.svg"
+              alt="Instagram"
+              class="size-8 inline-block"
+            />
+            <span class="text-lg">Ver Instagram</span>
+          </a>
+        </div>
+      </nav>
+      <section
+        class="min-h-svh w-full flex items-center px-4 py-24 md:py-0 hero-background bg-[#111012] bg-cover bg-center bg-fixed"
+      >
+        <div
+          class="flex flex-col items-center justify-center w-full max-w-3xl space-y-4 text-center mx-auto px-4"
+        >
+          <h1 class="text-4xl font-bold text-[#ff6501]">
+            Cresça no Digital com a Solução Que Faz Sentido Para o Seu Negócio.
+          </h1>
+          <p class="text-base text-gray-100 font-medium mb-10">
+            Com a Alle Assessoria & Marketing, você decide: aprender a anunciar,
+            contar com nossa gestão, ter sua página de alta conversão pronta
+            para vender e/ou melhorar sua presença nas redes sociais.
+          </p>
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 grid-rows-1 gap-2 text-left"
+          >
+            <div
+              class="bg-glass rounded-2xl shadow-lg space-y-1 p-1 px-2 flex items-center gap-2"
+            >
+              <img
+                src="/public/bullhorn-solid-full.svg"
+                alt="Marketing Digital"
+                class="size-5"
+              />
+              <p class="text-sm font-semibold text-white">
+                Aprender a anunciar sozinho
+              </p>
+            </div>
+            <div
+              class="bg-glass rounded-2xl shadow-lg space-y-1 p-2 flex items-center gap-2"
+            >
+              <img
+                src="/public/rectangle-ad-solid-full.svg"
+                alt="Marketing Digital"
+                class="size-5"
+              />
+              <p class="text-sm font-semibold text-white">
+                Gestão de tráfego pago
+              </p>
+            </div>
+            <div
+              class="bg-glass rounded-2xl shadow-lg space-y-1 p-1 px-2 flex items-center gap-2"
+            >
+              <img
+                src="/public/globe-solid-full.svg"
+                alt="Marketing Digital"
+                class="size-5"
+              />
+              <p class="text-sm font-semibold text-white">
+                Landing page de alta conversão
+              </p>
+            </div>
+            <div
+              class="bg-glass rounded-2xl shadow-lg space-y-1 p-1 px-2 flex items-center gap-2"
+            >
+              <img
+                src="/public/mobile-screen-solid-full.svg"
+                alt="Marketing Digital"
+                class="size-5"
+              />
+              <p class="text-sm font-semibold text-white">
+                Social media (gestão de redes sociais)
+              </p>
+            </div>
           </div>
+          <button
+            class="text-white p-4 md:p-4 md:px-8 rounded-full font-bold hover:bg-gray-800 transition duration-300 cursor-pointer mt-16 primary-color"
+          >
+            Quero Atrair Mais Clientes Agora
+          </button>
         </div>
       </section>
     </main>
+
+    <script src="./src/scripts/hamburger-menu.js"></script>
   </body>
 </html>

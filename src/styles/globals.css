@@ -1,1 +1,25 @@
 @import "tailwindcss";
+
+body {
+  overflow-x: hidden;
+}
+
+.primary-color {
+  background-color: #ff6501;
+}
+
+.background-dark {
+  background-color: #101012;
+}
+
+.hero-background {
+  background-image: url("/public/hero.webp");
+}
+
+.bg-glass {
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15.3px);
+  -webkit-backdrop-filter: blur(15.3px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
