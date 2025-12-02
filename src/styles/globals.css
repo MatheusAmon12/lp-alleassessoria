@@ -50,3 +50,12 @@ body {
   -webkit-backdrop-filter: blur(5.8px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
+
+.linear-gradient-primary {
+  background: #ff6501;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 101, 1, 1) 19%,
+    rgba(237, 221, 83, 0) 67%
+  );
+}
