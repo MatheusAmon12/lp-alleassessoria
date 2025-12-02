@@ -18,7 +18,11 @@ body {
 }
 
 .background_2 {
-  background-image: url("/public/background_2.webp");
+  background-image: url("/public/background-2.webp");
+}
+
+.background_3 {
+  background-image: url("/public/background_3.webp");
 }
 
 .bg-glass {

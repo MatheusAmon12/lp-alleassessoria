@@ -13,6 +13,7 @@
     --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-lg: 32rem;
     --container-xl: 36rem;
     --container-3xl: 48rem;
     --text-sm: 0.875rem;
@@ -21,8 +22,6 @@
     --text-base--line-height: calc(1.5 / 1);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
-    --text-xl: 1.25rem;
-    --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
@@ -188,14 +187,8 @@
   }
 }
 @layer utilities {
-  .pointer-events-none {
-    pointer-events: none;
-  }
   .absolute {
     position: absolute;
-  }
-  .relative {
-    position: relative;
   }
   .top-0 {
     top: calc(var(--spacing) * 0);
@@ -250,10 +243,6 @@
     width: calc(var(--spacing) * 8);
     height: calc(var(--spacing) * 8);
   }
-  .size-20 {
-    width: calc(var(--spacing) * 20);
-    height: calc(var(--spacing) * 20);
-  }
   .h-20 {
     height: calc(var(--spacing) * 20);
   }
@@ -262,9 +251,6 @@
   }
   .h-fit {
     height: fit-content;
-  }
-  .h-full {
-    height: 100%;
   }
   .h-svh {
     height: 100svh;
@@ -286,6 +272,9 @@
   }
   .max-w-full {
     max-width: 100%;
+  }
+  .max-w-lg {
+    max-width: var(--container-lg);
   }
   .max-w-xl {
     max-width: var(--container-xl);
@@ -356,6 +345,13 @@
       margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
+  .space-y-6 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
   .space-y-10 {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 0;
@@ -376,8 +372,20 @@
   .bg-\[\#111012\] {
     background-color: #111012;
   }
+  .bg-\[url\(\'\/public\/\'\)\] {
+    background-image: url('/public/');
+  }
+  .bg-\[url\(\'\/public\/bac\'\)\] {
+    background-image: url('/public/bac');
+  }
+  .bg-\[url\(\'\/public\/background-2\.webp\'\)\] {
+    background-image: url('/public/background-2.webp');
+  }
   .bg-\[url\(\'\/public\/background_2\.webp\'\)\] {
     background-image: url('/public/background_2.webp');
+  }
+  .bg-\[url\(\'\/public\/background_3\.webp\'\)\] {
+    background-image: url('/public/background_3.webp');
   }
   .bg-contain {
     background-size: contain;
@@ -405,6 +413,9 @@
   }
   .p-4 {
     padding: calc(var(--spacing) * 4);
+  }
+  .p-8 {
+    padding: calc(var(--spacing) * 8);
   }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
@@ -456,10 +467,6 @@
   .text-sm {
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
-  }
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -622,7 +629,10 @@ body {
   background-image: url("/public/hero.webp");
 }
 .background_2 {
-  background-image: url("/public/background_2.webp");
+  background-image: url("/public/background-2.webp");
+}
+.background_3 {
+  background-image: url("/public/background_3.webp");
 }
 .bg-glass {
   background: rgba(255, 255, 255, 0);
