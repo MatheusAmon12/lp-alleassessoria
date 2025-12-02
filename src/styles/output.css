@@ -32,7 +32,9 @@
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
+    --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
+    --radius-3xl: 1.5rem;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -209,6 +211,12 @@
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
+  .left-2 {
+    left: calc(var(--spacing) * 2);
+  }
+  .left-6 {
+    left: calc(var(--spacing) * 6);
+  }
   .z-50 {
     z-index: 50;
   }
@@ -270,6 +278,9 @@
   .h-fit {
     height: fit-content;
   }
+  .h-full {
+    height: 100%;
+  }
   .h-svh {
     height: 100svh;
   }
@@ -303,6 +314,9 @@
   .border-collapse {
     border-collapse: collapse;
   }
+  .rotate-180 {
+    rotate: 180deg;
+  }
   .cursor-pointer {
     cursor: pointer;
   }
@@ -314,6 +328,9 @@
   }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   .grid-rows-1 {
     grid-template-rows: repeat(1, minmax(0, 1fr));
@@ -389,8 +406,14 @@
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
+  .rounded-3xl {
+    border-radius: var(--radius-3xl);
+  }
   .rounded-full {
     border-radius: calc(infinity * 1px);
+  }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
   }
   .border {
     border-style: var(--tw-border-style);
@@ -410,8 +433,26 @@
   .bg-\[\#111012\] {
     background-color: #111012;
   }
+  .bg-\[url\] {
+    background-color: url;
+  }
+  .bg-\[url\(\'\/public\/background-\.webp\'\)\] {
+    background-image: url('/public/background-.webp');
+  }
+  .bg-\[url\(\'\/public\/background-2-invertido\.webp\'\)\] {
+    background-image: url('/public/background-2-invertido.webp');
+  }
   .bg-\[url\(\'\/public\/background-2\.webp\'\)\] {
     background-image: url('/public/background-2.webp');
+  }
+  .bg-\[url\(\'\/public\/background-3\.webp\'\)\] {
+    background-image: url('/public/background-3.webp');
+  }
+  .bg-\[url\(\'\/public\/background-4\.webp\'\)\] {
+    background-image: url('/public/background-4.webp');
+  }
+  .bg-\[url\(\'\/public\/background_2\.webp\'\)\] {
+    background-image: url('/public/background_2.webp');
   }
   .bg-\[url\(\'\/public\/background_3\.webp\'\)\] {
     background-image: url('/public/background_3.webp');
@@ -613,14 +654,29 @@
       display: none;
     }
   }
+  .md\:grid-cols-2 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
   .md\:grid-cols-4 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
+  .md\:gap-10 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 10);
+    }
+  }
   .md\:p-4 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 4);
+    }
+  }
+  .md\:px-0 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 0);
     }
   }
   .md\:px-8 {
@@ -643,9 +699,19 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
+  .lg\:grid-cols-4 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
   .lg\:flex-row {
     @media (width >= 64rem) {
       flex-direction: row;
+    }
+  }
+  .lg\:bg-cover {
+    @media (width >= 64rem) {
+      background-size: cover;
     }
   }
   .lg\:px-40 {
