@@ -7,7 +7,6 @@
     "build": "parcel build"
   },
   "dependencies": {
-    "@lottiefiles/dotlottie-web": "^0.57.0",
     "@tailwindcss/cli": "^4.1.17",
     "tailwindcss": "^4.1.17"
   },

@@ -25,6 +25,10 @@ body {
   background-image: url("/public/background_3.webp");
 }
 
+.background_2_reversed {
+  background-image: url("/public/background-2-invertido.webp");
+}
+
 .bg-glass {
   background: rgba(255, 255, 255, 0);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
