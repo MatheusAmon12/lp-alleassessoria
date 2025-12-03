@@ -15,6 +15,7 @@
     --spacing: 0.25rem;
     --container-lg: 32rem;
     --container-xl: 36rem;
+    --container-2xl: 42rem;
     --container-3xl: 48rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
@@ -212,6 +213,9 @@
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
+  .left-6 {
+    left: calc(var(--spacing) * 6);
+  }
   .z-50 {
     z-index: 50;
   }
@@ -283,6 +287,9 @@
   }
   .w-full {
     width: 100%;
+  }
+  .max-w-2xl {
+    max-width: var(--container-2xl);
   }
   .max-w-3xl {
     max-width: var(--container-3xl);
@@ -404,6 +411,9 @@
   .bg-\[\#111012\] {
     background-color: #111012;
   }
+  .bg-\[\#ff6501\] {
+    background-color: #ff6501;
+  }
   .bg-\[url\(\'\/public\/background-2-invertido\.webp\'\)\] {
     background-image: url('/public/background-2-invertido.webp');
   }
@@ -515,6 +525,9 @@
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
+  }
+  .text-\[\#\] {
+    color: #;
   }
   .text-\[\#ff6501\] {
     color: #ff6501;
