@@ -52,10 +52,10 @@ body {
 }
 
 .linear-gradient-primary {
-  background: #ff6501;
+  background: #ff924a;
   background: linear-gradient(
-    180deg,
-    rgba(255, 101, 1, 1) 19%,
-    rgba(237, 221, 83, 0) 67%
+    -180deg,
+    rgba(255, 146, 74, 1) 19%,
+    rgba(255, 101, 1, 1) 67%
   );
 }
