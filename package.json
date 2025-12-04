@@ -4,7 +4,7 @@
   "scripts": {
     "start": "parcel",
     "dev": "parcel index.html --open",
-    "build": "parcel build"
+    "build": "parcel build index.html"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.17",
