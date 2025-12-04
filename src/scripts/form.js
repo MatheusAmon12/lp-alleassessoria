@@ -44,8 +44,6 @@ const handleFormSubmit = (event) => {
   const splittedName = name.split(" ");
   const firstName = splittedName[0];
 
-  console.log("Form Data:", { name, whatsApp, time, business });
-
   event.target.reset();
 
   showToast(`${firstName}, obrigado pelo contato!`, "success");
@@ -54,6 +52,4 @@ const handleFormSubmit = (event) => {
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("#contact-form");
   if (form) form.addEventListener("submit", handleFormSubmit);
-
-  console.log(form);
 });
