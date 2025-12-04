@@ -1786,8 +1786,151 @@
           </div>
         </div>
       </section>
+
+      <section
+        class="w-full min-h-svh py-20 px-4 flex flex-col lg:grid lg:grid-cols-2 items-center gap-10 lg:px-40"
+      >
+        <div class="w-full space-y-10">
+          <div class="text-gray-200 space-y-3 text-center lg:text-left">
+            <h2 class="text-3xl font-bold">
+              <span class="text-[#ff6501]"
+                >Deixe de Ser Invisível no Digital.</span
+              >
+              Está na Hora do Seu Negócio Atrair Mais Clientes e Engajar Seu
+              Público!
+            </h2>
+            <p class="text-sm">
+              Aprenda sozinho, delegue para especialistas ou tenha sua página
+              pronta. Quatro caminhos, um objetivo: clientes chegando todos os
+              dias.
+            </p>
+          </div>
+
+          <button
+            class="text-white p-4 md:p-4 md:px-8 rounded-full font-bold hover:bg-gray-800 transition duration-300 cursor-pointer mt-16 primary-color block mx-auto lg:mx-0"
+          >
+            Quero Atrair Mais Clientes Agora
+          </button>
+        </div>
+        <div class="w-full h-fit">
+          <img
+            src="/public/rocket.webp"
+            alt="Serviços de Marketing Digital"
+            class="object-contain max-w-full h-auto"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <section
+        class="w-full py-20 space-y-10 bg-contain bg-left bg-no-repeat px-4 lg:px-40"
+      >
+        <div class="space-y-3 text-center text-gray-200 max-w-xl mx-auto">
+          <h1 class="text-3xl font-bold">
+            Prefere
+            <span class="text-[#ff6501]">Bater um Papo por Telefone</span> com
+            Nossa Equipe?
+          </h1>
+          <p class="text-sm">
+            Deixe seus dados e nossa equipe entrará em contato no horário que
+            você escolher — simples, rápido e sem enrolação.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-xl max-w-2xl mx-auto">
+          <form
+            id="contact-form"
+            class="grid grid-cols-1 lg:grid-cols-2 gap-10"
+          >
+            <div class="flex flex-col relative">
+              <label
+                for="name"
+                class="text-sm text-gray-200 font-semibold absolute -top-3 left-3 bg-[#0f0e0f] px-2 rounded-full"
+                >Nome completo</label
+              >
+              <input
+                required
+                minlength="1"
+                maxlength="120"
+                aria-required="true"
+                type="text"
+                aria-label="Nome"
+                name="name"
+                id="name"
+                class="ring-1 ring-gray-300 rounded-md p-3 text-gray-200 focus:outline-none focus:ring-2 focus:ring-[#ff6501] transition duration-300 h-[50px]"
+              />
+            </div>
+
+            <div class="flex flex-col relative">
+              <label
+                for="phone"
+                class="text-sm text-gray-200 font-semibold absolute -top-3 left-3 bg-[#0f0e0f] px-2 rounded-full"
+                >WhatsApp</label
+              >
+              <input
+                required
+                minlength="1"
+                aria-required="true"
+                type="tel"
+                inputmode="tel"
+                aria-label="WhatsApp"
+                name="phone"
+                id="phone"
+                class="ring-1 ring-gray-300 rounded-md p-3 text-gray-200 focus:outline-none focus:ring-2 focus:ring-[#ff6501] transition duration-300 h-[50px]"
+              />
+            </div>
+
+            <div class="flex flex-col relative">
+              <label
+                for="time"
+                class="text-sm text-gray-200 font-semibold absolute -top-3 left-3 bg-[#0f0e0f] px-2 rounded-full"
+              >
+                Melhor horário para ligação
+              </label>
+
+              <select
+                name="time"
+                id="time"
+                class="ring-1 ring-gray-300 rounded-md p-3 text-gray-200 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#ff6501] transition duration-300 text-sm h-[50px]"
+              >
+                <option value="dog" class="bg-[#0f0e0f]">Manhã</option>
+                <option value="cat" class="bg-[#0f0e0f]">Tarde</option>
+                <option value="hamster" class="bg-[#0f0e0f]">Noite</option>
+              </select>
+            </div>
+
+            <div class="flex flex-col relative">
+              <label
+                for="business"
+                class="text-sm text-gray-200 font-semibold absolute -top-3 left-3 bg-[#0f0e0f] px-2 rounded-full"
+                >Qual é o seu negócio ou profissão?</label
+              >
+              <input
+                required
+                minlength="1"
+                maxlength="500"
+                aria-required="true"
+                aria-label="Qual é o seu negócio ou profissão?"
+                name="business"
+                id="business"
+                class="ring-1 ring-gray-300 rounded-md p-3 text-gray-200 focus:outline-none focus:ring-2 focus:ring-[#ff6501] transition duration-300 h-[50px]"
+              />
+            </div>
+
+            <button
+              form="contact-form"
+              type="submit"
+              class="w-full max-w-sm lg:col-span-2 text-white p-4 md:p-4 md:px-8 rounded-full font-bold hover:bg-gray-800 transition duration-300 cursor-pointer mt-4 primary-color mx-auto block"
+            >
+              Quero Agendar Minha Ligação
+            </button>
+          </form>
+        </div>
+      </section>
     </main>
 
+    <script src="./src/scripts/phone-mask.js"></script>
+    <script src="./src/scripts/form.js"></script>
     <script src="./src/scripts/hamburger-menu.js"></script>
   </body>
 </html>
