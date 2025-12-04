@@ -228,8 +228,23 @@
   .right-6 {
     right: calc(var(--spacing) * 6);
   }
+  .-bottom-6 {
+    bottom: calc(var(--spacing) * -6);
+  }
+  .-bottom-8 {
+    bottom: calc(var(--spacing) * -8);
+  }
+  .-bottom-10 {
+    bottom: calc(var(--spacing) * -10);
+  }
   .-bottom-14 {
     bottom: calc(var(--spacing) * -14);
+  }
+  .-bottom-16 {
+    bottom: calc(var(--spacing) * -16);
+  }
+  .-bottom-18 {
+    bottom: calc(var(--spacing) * -18);
   }
   .-bottom-24 {
     bottom: calc(var(--spacing) * -24);
@@ -961,6 +976,21 @@
       padding-block: calc(var(--spacing) * 0);
     }
   }
+  .lg\:-bottom-14 {
+    @media (width >= 64rem) {
+      bottom: calc(var(--spacing) * -14);
+    }
+  }
+  .lg\:-bottom-24 {
+    @media (width >= 64rem) {
+      bottom: calc(var(--spacing) * -24);
+    }
+  }
+  .lg\:bottom-14 {
+    @media (width >= 64rem) {
+      bottom: calc(var(--spacing) * 14);
+    }
+  }
   .lg\:col-span-2 {
     @media (width >= 64rem) {
       grid-column: span 2 / span 2;
@@ -974,6 +1004,11 @@
   .lg\:grid {
     @media (width >= 64rem) {
       display: grid;
+    }
+  }
+  .lg\:h-\[90\%\] {
+    @media (width >= 64rem) {
+      height: 90%;
     }
   }
   .lg\:grid-cols-2 {
@@ -1029,6 +1064,20 @@
   .lg\:text-left {
     @media (width >= 64rem) {
       text-align: left;
+    }
+  }
+  .lg\:opacity-0 {
+    @media (width >= 64rem) {
+      opacity: 0%;
+    }
+  }
+  .lg\:group-hover\:opacity-100 {
+    @media (width >= 64rem) {
+      &:is(:where(.group):hover *) {
+        @media (hover: hover) {
+          opacity: 100%;
+        }
+      }
     }
   }
   .\[\&\:\:-webkit-scrollbar\]\:hidden {
