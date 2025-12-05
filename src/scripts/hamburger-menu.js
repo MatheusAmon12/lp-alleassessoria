@@ -4,21 +4,22 @@ const toggleMenu = () => {
   const sidebar = document.getElementById("sidebar");
   const navItems = document.querySelectorAll(".nav-item");
 
+  const openSidebar = () => {
+    sidebar.classList.remove("translate-x-full");
+    document.body.classList.add("body-no-scroll");
+  };
+
+  const closeSidebar = () => {
+    sidebar.classList.add("translate-x-full");
+    document.body.classList.remove("body-no-scroll");
+  };
+
+  menuHamburger.addEventListener("click", openSidebar);
+  closeButton.addEventListener("click", closeSidebar);
+
   navItems.forEach((item) => {
-    item.addEventListener("click", () => {
-      sidebar.style.right = "-100%";
-    });
-  });
-
-  menuHamburger.addEventListener("click", () => {
-    sidebar.style.right = "0";
-  });
-
-  closeButton.addEventListener("click", () => {
-    sidebar.style.right = "-100%";
+    item.addEventListener("click", closeSidebar);
   });
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-  toggleMenu();
-});
+document.addEventListener("DOMContentLoaded", toggleMenu);

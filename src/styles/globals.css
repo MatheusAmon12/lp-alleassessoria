@@ -1,13 +1,22 @@
 @import "tailwindcss";
 @import "./components/toast.css";
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  overflow-x: hidden;
   background-color: #0f0e0f;
+}
+
+.body-no-scroll {
+  overflow: hidden;
+  height: 100vh;
 }
 
 .primary-color {
