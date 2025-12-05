@@ -36,7 +36,7 @@ const handleFormSubmit = (event) => {
     .replace(/\D/g, "");
   const time = PERIOD_OF_DAY[formData.get("time").trim()];
   const business = formData.get("business").trim();
-  const submitButton = event.target.querySelector('button[type="submit"]');
+  const submitButton = document.getElementById("submit-button");
 
   //Ensure that all fields exists
   if (!name || !whatsapp || !time || !business) {
