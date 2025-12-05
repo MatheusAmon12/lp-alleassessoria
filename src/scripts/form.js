@@ -21,21 +21,30 @@ const handleFormSubmit = (event) => {
   //Its prevents default form action
   event.preventDefault();
 
+  const PERIOD_OF_DAY = {
+    manha: "Manhã",
+    tarde: "Tarde",
+    noite: "Noite",
+  };
+
   const formData = new FormData(event.target);
   const name = formData.get("name").trim();
-  const whatsApp = formData.get("phone").trim();
-  const time = formData.get("time").trim();
+  const whatsapp = formData
+    .get("phone")
+    .trim()
+    .replace(/\s+/g, "")
+    .replace(/\D/g, "");
+  const time = PERIOD_OF_DAY[formData.get("time").trim()];
   const business = formData.get("business").trim();
-
-  const body = document.querySelector("body");
+  const submitButton = event.target.querySelector('button[type="submit"]');
 
   //Ensure that all fields exists
-  if (!name || !whatsApp || !time || !business) {
+  if (!name || !whatsapp || !time || !business) {
     showToast("Preencha todos os campos", "error");
     return;
   }
 
-  if (whatsApp.replace(/\D/g, "").length < 11) {
+  if (whatsapp.replace(/\D/g, "").length < 11) {
     showToast("Por favor, insira um número de WhatsApp válido", "error");
     return;
   }
@@ -44,9 +53,40 @@ const handleFormSubmit = (event) => {
   const splittedName = name.split(" ");
   const firstName = splittedName[0];
 
-  event.target.reset();
+  const PUBLIC_KEY = "f3LDmr1kXGdaw7wyC";
+  const SERVICE_ID = "service_exluv3h";
+  const TEMPLATE_ID = "template_inshvq8a";
 
-  showToast(`${firstName}, obrigado pelo contato!`, "success");
+  try {
+    submitButton.disabled = true;
+    submitButton.textContent = "Enviando...";
+
+    emailjs.init({
+      publicKey: PUBLIC_KEY,
+      limitRate: {
+        id: "app",
+        throttle: 10000,
+      },
+    });
+
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, {
+      name,
+      whatsapp,
+      time,
+      business,
+    });
+
+    showToast(`${firstName}, obrigado pelo contato!`, "success");
+
+    event.target.reset();
+  } catch (error) {
+    console.error("Erro ao enviar o formulário:", error);
+    showToast("Ocorreu um erro ao enviar o formulário.", "error");
+    return;
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = "Quero Agendar Minha Ligação";
+  }
 };
 
 document.addEventListener("DOMContentLoaded", () => {

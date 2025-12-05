@@ -2005,9 +2005,9 @@
                 id="time"
                 class="ring-1 ring-gray-300 rounded-md p-3 text-gray-200 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#ff6501] transition duration-300 text-sm h-[50px]"
               >
-                <option value="dog" class="bg-[#0f0e0f]">Manhã</option>
-                <option value="cat" class="bg-[#0f0e0f]">Tarde</option>
-                <option value="hamster" class="bg-[#0f0e0f]">Noite</option>
+                <option value="manha" class="bg-[#0f0e0f]">Manhã</option>
+                <option value="tarde" class="bg-[#0f0e0f]">Tarde</option>
+                <option value="noite" class="bg-[#0f0e0f]">Noite</option>
               </select>
             </div>
 
@@ -2035,7 +2035,7 @@
               <button
                 form="contact-form"
                 type="submit"
-                class="text-white p-4 md:p-4 md:px-8 rounded-full font-bold hover:bg-gray-800 transition duration-300 cursor-pointer mt-4 primary-color mx-auto block"
+                class="text-white p-4 md:p-4 md:px-8 rounded-full font-bold hover:bg-gray-800 transition duration-300 cursor-pointer mt-4 primary-color mx-auto block disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 Quero Agendar Minha Ligação
               </button>
@@ -2104,6 +2104,10 @@
       </footer>
     </main>
 
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
