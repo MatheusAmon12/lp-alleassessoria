@@ -119,6 +119,95 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // mobile motions
   mm.add("(max-width: 768px)", () => {
+    gsap.from("#member-photo-container-one", {
+      duration: 1.3,
+      x: "-100vw",
+      scrollTrigger: {
+        trigger: "#who-we-are",
+        start: "top 0px",
+      },
+    });
+
+    gsap.from("#member-photo-one", {
+      duration: 1.3,
+      delay: 0.2,
+      y: "100vh",
+      scrollTrigger: {
+        trigger: "#who-we-are",
+        start: "top 0px",
+      },
+    });
+
+    gsap.from("#member-name-one", {
+      duration: 1.3,
+      delay: 0.2,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: "#who-we-are",
+        start: "top 0px",
+      },
+    });
+
+    gsap.from("#member-photo-container-two", {
+      duration: 1.3,
+      y: "100vh",
+      delay: 0.2,
+      scrollTrigger: {
+        trigger: "#who-we-are",
+        start: "top 0px",
+      },
+    });
+
+    gsap.from("#member-name-two", {
+      duration: 1.3,
+      delay: 0.2,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: "#who-we-are",
+        start: "top 0px",
+      },
+    });
+
+    gsap.from("#member-photo-two", {
+      duration: 1.3,
+      delay: 0.2,
+      y: "100vh",
+      scrollTrigger: {
+        trigger: "#who-we-are",
+        start: "top 0px",
+      },
+    });
+
+    gsap.from("#member-photo-container-three", {
+      duration: 1.3,
+      x: "100vw",
+      delay: 0.4,
+      scrollTrigger: {
+        trigger: "#who-we-are",
+        start: "top 0px",
+      },
+    });
+
+    gsap.from("#member-name-three", {
+      duration: 1.3,
+      delay: 0.2,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: "#who-we-are",
+        start: "top 0px",
+      },
+    });
+
+    gsap.from("#member-photo-three", {
+      duration: 1.3,
+      delay: 0.2,
+      y: "100vh",
+      scrollTrigger: {
+        trigger: "#who-we-are",
+        start: "top 0px",
+      },
+    });
+
     gsap.from("#success-case-one", {
       x: "100vw",
       duration: 1.3,
