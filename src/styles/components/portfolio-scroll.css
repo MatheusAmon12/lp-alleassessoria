@@ -1,0 +1,40 @@
+.portfolio-wrapper {
+  /* Máscara suave nas laterais */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+}
+
+.portfolio-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.track-container {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+.track-container:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

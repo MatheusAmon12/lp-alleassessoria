@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./components/toast.css";
+@import "./components/portfolio-scroll.css";
 
 html,
 body {
