@@ -1,10 +1,10 @@
 {
   "name": "lp-alleassessoria",
-  "source": "./index.html",
+  "source": "./*.html",
   "scripts": {
     "start": "parcel",
-    "dev": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "dev": "parcel './*.html' --open",
+    "build": "parcel build './*.html'"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.17",
